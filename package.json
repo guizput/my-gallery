@@ -16,7 +16,7 @@
     "watch": "npm-run-all --parallel watch:*",
     "serve": "browser-sync start --server public --files public",
     "start": "npm-run-all copy --parallel watch serve",
-    "build": "npm-run-all copy:html build:* postbuild",
+    "build": "npm-run-all copy:* build:* postbuild",
     "minify:css": "postcss public/css/*.css -u autoprefixer cssnano -r --no-map",
     "minify:js": "uglifyjs public/js/app.js --compress --mangle",
     "postbuild": "npm-run-all minify:*"
